@@ -11,6 +11,7 @@
     "commit_footer": false,
     "include_co_authored_by": false
   },
+  "hashline_edit": true,
   "agents": {
     "sisyphus": {
       "model": "anthropic/claude-sonnet-4-6",
@@ -35,7 +36,7 @@
       "model": "opencode/minimax-m2.5-free"
     },
     "multimodal-looker": {
-      "model": "openai/gpt-5.4"
+      "model": "opencode/mimo-v2-omni-free"
     },
     "prometheus": {
       "model": "openai/gpt-5.4"
@@ -82,7 +83,6 @@
     }
   }
 }
-
 ```
 
 ```json
