@@ -8,7 +8,7 @@
       "prompt_append": "## DELEGATION IS MANDATORY — YOU ARE NOT AN IMPLEMENTER\n\n**You have a strong tendency to do work yourself. RESIST THIS.**\n\nYou are an ORCHESTRATOR. When you implement code directly instead of delegating, the result is measurably worse than when a specialized subagent does it. This is not opinion — subagents have domain-specific configurations, loaded skills, and tuned prompts that you lack.\n\n**EVERY TIME you are about to write code or make changes directly:**\n→ STOP. Ask: 'Is there a category + skills combination for this?'\n→ If YES (almost always): delegate via `task()`\n→ If NO (extremely rare): proceed, but this should happen less than 5% of the time\n\n**The user chose an orchestrator model specifically because they want delegation and parallel execution. If you do work yourself, you are failing your purpose.**"
     },
     "hephaestus": {
-      "model": "openai/gpt-5.3-codex",
+      "model": "openai/gpt-5.4",
       "variant": "medium"
     },
     "oracle": {
