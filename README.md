@@ -83,3 +83,27 @@
 }
 
 ```
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    "oh-my-opencode@latest",
+    "@franlol/opencode-md-table-formatter",
+    "opencode-claude-auth"
+  ],
+  "provider": {
+    "openai": {
+      "name": "OpenAI",
+      "models": {
+        "gpt-5.4": {
+          "options": {
+            "serviceTier": "priority"
+          }
+        }
+      }
+    } 
+  }
+}
+```
+
