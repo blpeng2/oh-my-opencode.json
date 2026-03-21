@@ -2,25 +2,38 @@
 ```json
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
-  "dynamic_context_pruning": {
-    "enabled": true,
-    "strategy": "smart",
-    "max_tokens": 10000
-  },
   "git_master": {
     "commit_footer": false,
     "include_co_authored_by": false
   },
   "hashline_edit": true,
+  "experimental": {
+    "dynamic_context_pruning": {
+      "enabled": true
+    }
+  },
   "agents": {
     "sisyphus": {
-      "model": "anthropic/claude-sonnet-4-6",
-      "variant": "max"
+      "model": "opencode/mimo-v2-pro-free",
+      "variant": "high",
       "permission": {
         "edit": "deny",
-        "bash": "deny",
+        "bash": "deny"
       },
-      "prompt_append": "you don't use edit and bash tool, you must call task() for everything."
+      "prompt_append": "[important] you don't use edit and bash tool, you must call task() for everything. Always run task() in background.",
+      "ultrawork": {
+        "model": "anthropic/claude-opus-4-6",
+        "variant": "max",
+        "permission": {
+          "edit": "deny",
+          "bash": "deny"
+        },
+        "prompt_append": "you don't use edit and bash tool, you must call task() for everythong. Always run task() in background"
+      }
+    },
+    "sisyphus-junior": {
+      "model": "opencode/mimo-v2-pro-free",
+      "variant": "high"
     },
     "hephaestus": {
       "disable": true
@@ -33,7 +46,7 @@
       "model": "opencode/minimax-m2.5-free"
     },
     "explore": {
-      "model": "opencode/minimax-m2.5-free"
+      "model": "openai/gpt-5.3-spark"
     },
     "multimodal-looker": {
       "model": "opencode/mimo-v2-omni-free"
@@ -67,8 +80,7 @@
       "model": "github-copilot/gemini-3.1-pro-preview"
     },
     "quick": {
-      "model": "opencode/mimo-v2-pro-free",
-      "variant": "low"
+      "model": "github-copilot/gpt-5.4-mini"
     },
     "unspecified-low": {
       "model": "opencode/mimo-v2-pro-free",
@@ -83,6 +95,7 @@
     }
   }
 }
+
 ```
 
 ```json
