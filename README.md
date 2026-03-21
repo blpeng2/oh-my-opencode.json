@@ -10,11 +10,6 @@
     "commit_footer": false,
     "include_co_authored_by": false
   },
-  "skills": {
-    "git-master": {
-      "instructions": "Never include AI attribution, commit footers, co-author trailers, or 'Ultraworked with' text in commit messages. Follow the repository's commit style only."
-    }
-  },
   "agents": {
     "sisyphus": {
       "model": "anthropic/claude-sonnet-4-6",
@@ -22,7 +17,8 @@
       "permission": {
         "edit": "deny",
         "bash": "deny",
-      }
+      },
+      "prompt_append": "you don't use edit and bash tool, you must call task() for everything."
     },
     "hephaestus": {
       "disable": true
@@ -85,4 +81,5 @@
     }
   }
 }
+
 ```
