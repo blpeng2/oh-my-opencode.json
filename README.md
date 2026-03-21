@@ -1,15 +1,27 @@
 # oh-my-opencode.json
 ```json
 {
+  "dynamic_context_pruning": {
+    "enabled": true,
+    "strategy": "smart",
+    "max_tokens": 10000
+  },
+  "git_master": {
+    "commit_footer": false,
+    "include_co_authored_by": false
+  },
+  "skills": {
+    "git-master": {
+      "instructions": "Never include AI attribution, commit footers, co-author trailers, or 'Ultraworked with' text in commit messages. Follow the repository's commit style only."
+    }
+  },
   "agents": {
     "sisyphus": {
-      "model": "opencode/mimo-v2-pro-free",
-      "variant": "high",
-      "prompt_append": "## DELEGATION IS MANDATORY — YOU ARE NOT AN IMPLEMENTER\n\n**You have a strong tendency to do work yourself. RESIST THIS.**\n\nYou are an ORCHESTRATOR. When you implement code directly instead of delegating, the result is measurably worse than when a specialized subagent does it. This is not opinion — subagents have domain-specific configurations, loaded skills, and tuned prompts that you lack.\n\n**EVERY TIME you are about to write code or make changes directly:**\n→ STOP. Ask: 'Is there a category + skills combination for this?'\n→ If YES (almost always): delegate via `task()`\n→ If NO (extremely rare): proceed, but this should happen less than 5% of the time\n\n**The user chose an orchestrator model specifically because they want delegation and parallel execution. If you do work yourself, you are failing your purpose.**"
+      "model": "anthropic/claude-sonnet-4-6",
+      "variant": "max"
     },
     "hephaestus": {
-      "model": "openai/gpt-5.4",
-      "variant": "medium"
+      "disable": true
     },
     "oracle": {
       "model": "openai/gpt-5.4",
@@ -19,66 +31,55 @@
       "model": "opencode/minimax-m2.5-free"
     },
     "explore": {
-      "model": "github-copilot/grok-code-fast-1"
+      "model": "opencode/minimax-m2.5-free"
     },
     "multimodal-looker": {
-      "model": "openai/gpt-5.4",
-      "variant": "medium"
+      "model": "openai/gpt-5.4"
     },
     "prometheus": {
-      "model": "anthropic/claude-opus-4-6",
-      "variant": "max"
+      "model": "openai/gpt-5.4"
     },
     "metis": {
-      "model": "anthropic/claude-opus-4-6",
-      "variant": "max"
+      "model": "openai/gpt-5.4"
     },
     "momus": {
       "model": "openai/gpt-5.4",
-      "variant": "high"
+      "variant": "medium"
     },
     "atlas": {
-      "model": "anthropic/claude-sonnet-4-6"
+      "model": "anthropic/claude-sonnet-4-6",
+      "variant": "max"
     }
   },
   "categories": {
     "visual-engineering": {
-      "model": "github-copilot/gemini-3.1-pro-preview"
+      "model": "opencode/mimo-v2-omni-free"
     },
     "ultrabrain": {
-      "model": "openai/gpt-5.3-codex",
-      "variant": "xhigh"
+      "model": "openai/gpt-5.4"
     },
     "deep": {
-      "model": "openai/gpt-5.3-codex",
-      "variant": "medium"
+      "model": "openai/gpt-5.3-codex"
     },
     "artistry": {
       "model": "github-copilot/gemini-3.1-pro-preview"
     },
     "quick": {
-      "model": "anthropic/claude-haiku-4-5"
+      "model": "opencode/mimo-v2-pro-free",
+      "variant": "low"
     },
     "unspecified-low": {
-      "model": "openai/gpt-5.3-codex"
+      "model": "opencode/mimo-v2-pro-free",
+      "variant": "medium"
     },
     "unspecified-high": {
-      "model": "openai/gpt-5.4",
+      "model": "opencode/mimo-v2-pro-free",
       "variant": "high"
     },
     "writing": {
       "model": "kimi-for-coding/k2p5"
     }
-  },
-  "hashline_edit": true,
-  "git_master": {
-    "commit_footer": "",
-    "include_co_authored_by": false
-  },
-  "skills": {
-    "git-master": {
-      "instructions": "Never include AI attribution, commit footers, co-author trailers, or 'Ultraworked with' text in commit messages. Follow the repository's commit style only."
-    }
   }
 }
+
 ```
