@@ -1,6 +1,7 @@
 # oh-my-opencode.json
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
   "dynamic_context_pruning": {
     "enabled": true,
     "strategy": "smart",
