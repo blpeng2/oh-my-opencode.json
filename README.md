@@ -46,7 +46,7 @@
       "model": "opencode/minimax-m2.5-free"
     },
     "explore": {
-      "model": "openai/gpt-5.3-spark"
+      "model": "opencode/minimax-m2.5-free"
     },
     "multimodal-looker": {
       "model": "opencode/mimo-v2-omni-free"
@@ -95,7 +95,6 @@
     }
   }
 }
-
 ```
 
 ```json
