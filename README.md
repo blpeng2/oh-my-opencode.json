@@ -19,6 +19,10 @@
     "sisyphus": {
       "model": "anthropic/claude-sonnet-4-6",
       "variant": "max"
+      "permission": {
+        "edit": "deny",
+        "bash": "deny",
+      }
     },
     "hephaestus": {
       "disable": true
@@ -81,5 +85,4 @@
     }
   }
 }
-
 ```
