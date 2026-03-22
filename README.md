@@ -8,29 +8,15 @@
     "include_co_authored_by": false
   },
   "hashline_edit": true,
-  "experimental": {
-    "dynamic_context_pruning": {
-      "enabled": true
-    }
-  },
   "agents": {
     "sisyphus": {
-      "model": "opencode/mimo-v2-pro-free",
-      "variant": "high",
+      "model": "anthropic/claude-opus-4-6",
+      "variant": "max",
       "permission": {
         "edit": "deny",
         "bash": "deny"
       },
-      "prompt_append": "[important] you don't use edit and bash tool, you must call task() for everything in background.",
-      "ultrawork": {
-        "model": "anthropic/claude-opus-4-6",
-        "variant": "max",
-        "permission": {
-          "edit": "deny",
-          "bash": "deny"
-        },
-        "prompt_append": "you don't use edit and bash tool, you must call task() for everything in background."
-      }
+      "prompt_append": "[important] you don't use edit and bash tool, you must call task() for everything in background."
     },
     "sisyphus-junior": {
       "model": "opencode/mimo-v2-pro-free",
@@ -50,7 +36,7 @@
       "model": "opencode/minimax-m2.5-free"
     },
     "multimodal-looker": {
-      "model": "opencode/mimo-v2-omni-free"
+      "model": "openai/gpt-5.4"
     },
     "prometheus": {
       "model": "openai/gpt-5.4"
@@ -69,7 +55,7 @@
   },
   "categories": {
     "visual-engineering": {
-      "model": "opencode/mimo-v2-omni-free"
+      "model": "github-copilot/gemini-3.1-pro-preview"
     },
     "ultrabrain": {
       "model": "openai/gpt-5.4"
