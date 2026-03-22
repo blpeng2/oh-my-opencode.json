@@ -18,10 +18,6 @@
       },
       "prompt_append": "[important] you don't use edit and bash tool, you must call task() for everything in background."
     },
-    "sisyphus-junior": {
-      "model": "opencode/mimo-v2-pro-free",
-      "variant": "high"
-    },
     "hephaestus": {
       "disable": true
     },
