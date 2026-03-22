@@ -2,6 +2,7 @@
 ```json
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
+  "disabled_hooks": ["todo-continuation-enforcer", "gpt-permission-continuation"],
   "git_master": {
     "commit_footer": false,
     "include_co_authored_by": false
@@ -20,7 +21,7 @@
         "edit": "deny",
         "bash": "deny"
       },
-      "prompt_append": "[important] you don't use edit and bash tool, you must call task() for everything. Always run task() in background.",
+      "prompt_append": "[important] you don't use edit and bash tool, you must call task() for everything in background.",
       "ultrawork": {
         "model": "anthropic/claude-opus-4-6",
         "variant": "max",
@@ -28,7 +29,7 @@
           "edit": "deny",
           "bash": "deny"
         },
-        "prompt_append": "you don't use edit and bash tool, you must call task() for everythong. Always run task() in background"
+        "prompt_append": "you don't use edit and bash tool, you must call task() for everything in background."
       }
     },
     "sisyphus-junior": {
