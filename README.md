@@ -7,16 +7,11 @@
     "commit_footer": false,
     "include_co_authored_by": false
   },
-  "hashline_edit": true,
+  "hashline_edit": false,
   "agents": {
     "sisyphus": {
-      "model": "anthropic/claude-sonnet-4-6",
-      "variant": "max",
-      "permission": {
-        "edit": "deny",
-        "bash": "deny"
-      },
-      "prompt_append": "[important] you don't use edit and bash tool, you must call task() for everything in background."
+      "model": "anthropic/claude-opus-4-6",
+      "variant": "max"
     },
     "hephaestus": {
       "disable": true
@@ -26,12 +21,10 @@
       "variant": "high"
     },
     "librarian": {
-      "model": "opencode/mimo-v2-pro-free",
-      "variant": "high"
+      "model": "opencode-go/minimax-m2.7"
     },
     "explore": {
-      "model": "opencode/mimo-v2-pro-free",
-      "variant": "high"
+      "model": "github-copilot/grok-code-fast-1"
     },
     "multimodal-looker": {
       "model": "openai/gpt-5.4",
@@ -51,12 +44,7 @@
     },
     "atlas": {
       "model": "anthropic/claude-sonnet-4-6",
-      "variant": "max",
-      "permission": {
-        "edit": "deny",
-        "bash": "deny",
-      },
-      "prompt_append": "[important] you don't use edit and bash tool, you must call task() for everything in background."
+      "variant": "max"
     }
   },
   "categories": {
@@ -72,8 +60,7 @@
     },
     // 자율 리서치 → 구현. 깊은 이해가 필요한 복잡한 문제 (연구원 방법론)
     "deep": {
-      "model": "openai/gpt-5.3-codex",
-      "variant": "medium"
+      "model": "openai/gpt-5.3-codex"
     },
     // 비정형 창의적 문제해결. 표준 패턴을 넘어서는 접근
     "artistry": {
@@ -85,17 +72,15 @@
       "model": "openai/gpt-5.4-mini",
       "variant": "medium"
     },
-    // 비활성화됨 (deep/quick으로 대체)
     "unspecified-low": {
-      "disable": true
+      "model": "anthropic/claude-sonnet-4-6"
     },
-    // 비활성화됨 (deep/ultrabrain으로 대체)
     "unspecified-high": {
-      "disable": true
+      "model": "anthropic/claude-opus-4-6"
     },
     // 문서, 산문, 기술 문서 작성
     "writing": {
-      "model": "kimi-for-coding/k2p5"
+      "model": "github-copilot/gemini-3-flash-preview"
     }
   }
 }
