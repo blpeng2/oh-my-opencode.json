@@ -2,7 +2,7 @@
 ```json
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
-  "disabled_hooks": ["todo-continuation-enforcer", "gpt-permission-continuation"],
+  // "disabled_hooks": ["todo-continuation-enforcer", "gpt-permission-continuation"],
   "git_master": {
     "commit_footer": false,
     "include_co_authored_by": false
@@ -10,17 +10,19 @@
   "hashline_edit": false,
   "agents": {
     "sisyphus": {
-      "model": "opencode-go/minimax-m2.7"
+      "model": "anthropic/claude-opus-4-6",
+      "variant": "max"
     },
     "hephaestus": {
-      "disable": true
+      "model": "openai/gpt-5.4",
+      "variant": "medium"
     },
     "oracle": {
       "model": "openai/gpt-5.4",
       "variant": "high"
     },
     "librarian": {
-      "model": "opencode/minimax-m2.5-free"
+      "model": "opencode-go/minimax-m2.7"
     },
     "explore": {
       "model": "github-copilot/grok-code-fast-1"
@@ -29,14 +31,17 @@
       "model": "openai/gpt-5.4",
       "variant": "medium"
     },
+    // 플랜 생성
     "prometheus": {
-      "model": "anthropic/claude-sonnet-4-6",
+      "model": "anthropic/claude-opus-4-6",
       "variant": "max"
     },
+    // 플랜 갭 분석
     "metis": {
-      "model": "anthropic/claude-sonnet-4-6",
+      "model": "anthropic/claude-opus-4-6",
       "variant": "max"
     },
+    // 과감한 리뷰어
     "momus": {
       "model": "openai/gpt-5.4",
       "variant": "xhigh"
@@ -68,14 +73,13 @@
     },
     // 단일 파일 수정, 오타, 간단한 변경
     "quick": {
-      "model": "openai/gpt-5.4-mini",
-      "variant": "medium"
+      "model": "openai/gpt-5.4-mini"
     },
     "unspecified-low": {
-      "model": "anthropic/claude-sonnet-4-6"
+      "disable": true
     },
     "unspecified-high": {
-      "model": "anthropic/claude-opus-4-6"
+      "disable": true
     },
     // 문서, 산문, 기술 문서 작성
     "writing": {
