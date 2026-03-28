@@ -10,8 +10,7 @@
   "hashline_edit": false,
   "agents": {
     "sisyphus": {
-      "model": "anthropic/claude-opus-4-6",
-      "variant": "max"
+      "model": "fireworks-ai/accounts/fireworks/routers/kimi-k2p5-turbo",
     },
     "hephaestus": {
       "model": "openai/gpt-5.4",
@@ -33,13 +32,13 @@
     },
     // 플랜 생성
     "prometheus": {
-      "model": "anthropic/claude-opus-4-6",
-      "variant": "max"
+      "model": "openai/gpt-5.4",
+      "variant": "high"
     },
     // 플랜 갭 분석
     "metis": {
-      "model": "anthropic/claude-opus-4-6",
-      "variant": "max"
+      "model": "gpt-5.4",
+      "variant": "high"
     },
     // 과감한 리뷰어
     "momus": {
@@ -47,8 +46,7 @@
       "variant": "xhigh"
     },
     "atlas": {
-      "model": "anthropic/claude-sonnet-4-6",
-      "variant": "max"
+      "model": "fireworks-ai/accounts/fireworks/routers/kimi-k2p5-turbo",
     }
   },
   "categories": {
@@ -83,11 +81,10 @@
     },
     // 문서, 산문, 기술 문서 작성
     "writing": {
-      "model": "github-copilot/gemini-3-flash-preview"
+      "model": "fireworks-ai/accounts/fireworks/routers/kimi-k2p5-turbo"
     }
   }
 }
-
 ```
 
 # opencode.json
