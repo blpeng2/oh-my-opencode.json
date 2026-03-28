@@ -20,7 +20,7 @@
       "variant": "high"
     },
     "librarian": {
-      "model": "opencode/minimax-m2.5"
+      "model": "opencode/minimax-m2.5-free"
     },
     "explore": {
       "model": "github-copilot/grok-code-fast-1"
