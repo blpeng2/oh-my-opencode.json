@@ -10,8 +10,7 @@
   "hashline_edit": false,
   "agents": {
     "sisyphus": {
-      "model": "anthropic/claude-opus-4-6",
-      "variant": "max"
+      "model": "opencode-go/minimax-m2.7"
     },
     "hephaestus": {
       "disable": true
@@ -21,7 +20,7 @@
       "variant": "high"
     },
     "librarian": {
-      "model": "opencode-go/minimax-m2.7"
+      "model": "opencode/minimax-m2.5"
     },
     "explore": {
       "model": "github-copilot/grok-code-fast-1"
@@ -97,19 +96,7 @@
     "@franlol/opencode-md-table-formatter",
     "opencode-claude-auth",
     "opencode-openai-codex-auth"
-  ],
-  "provider": {
-    "openai": {
-      "name": "OpenAI",
-      "models": {
-        "gpt-5.4": {
-          "options": {
-            "serviceTier": "priority"
-          }
-        }
-      }
-    }
-  }
+  ]
 }
 ```
 
